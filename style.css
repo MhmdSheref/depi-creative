@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+}
+
+p {
+    font-size: 1.2rem;
+    color: antiquewhite;
+    font-family: "Literata", serif;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 3.6rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.2s ease-in-out;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.button,
+.button-orange {
+    transition: filter 0.2s ease-in-out;
+    display: block;
+    margin: 2rem auto;
+    width: fit-content;
+    padding: 20px 32px;
+    border-radius: 64px;
+    color: black;
+    background: white;
+    font-weight: bold;
+}
+
+.button-orange {
+    color: white;
+    background: #f4623a;
+}
+
+
+.button:hover,
+.button-orange:hover {
+    filter: brightness(90%);
+}
+
+hr {
+    width: 3rem;
+    margin: 2rem auto;
+    border: #f4623a solid 2px
+}
+
+i {
+    font-size: 2rem;
+    color: #f4623a;
+}
+
+.container-50 {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.container-80 {
+    margin: 0 auto;
+    width: 80%;
+}
+
+header> div {
+    display: flex;
+    justify-content: space-between;
+}
+
+header h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+header a:hover {
+    color: #f4623a
+}
+
+header {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    padding: 20px 0;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    margin: auto 0;
+}
+
+header li {
+    font-weight: 600;
+    list-style: none;
+    margin: 0 15px;
+}
+
+.hero {
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/assets/img/bg-masthead.jpg") center;
+    background-size: cover;
+    min-height: 700px;
+    color: white;
+}
+
+.about {
+    background: #f4623a;
+    min-height: 480px;
+    color: white;
+}
+
+.about hr {
+    border-color: white;
+}
+
+.flex-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    width: 20%;
+}
+
+.services p {
+    color: dimgray;
+}
+
+.portfolio {
+    padding-bottom: 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-item {
+    position: relative;
+    width: 33.3333%;
+}
+
+.img-item img {
+    display: block;
+    width: 100%;
+}
+
+.img-item > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(244, 98, 58, 0.8);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.img-item:hover > div {
+    opacity: 100%;
+}
+
+.img-item p {
+    color: white;
+}
+
+.img-item h4 {
+    color: rgba(250, 235, 215, 0.75);
+}
+
+.cta {
+    background: #212529FF;
+    min-height: 400px;
+    color: white;
+}
+
+.contact p {
+    color: dimgray;
+}
+
+form {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+textarea {
+    font-size: 1rem;
+    text-align: left;
+    padding: 18px;
+    border-radius: 6px;
+    border: darkgray 1px solid;
+    resize: vertical;
+    font-family: "Literata", serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: black;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: gray;
+}
+
+#submit {
+    width: 100%;
+    border: none;
+}
+
+.phone p {
+    color: black;
+}
+
+.phone i {
+    color: dimgray;
+}
+
+footer {
+    background: #f8f8fa;
+    padding: 40px 0;
+}
+
+footer p {
+    color: dimgray;
+}
+
+@media (max-width: 990px) {
+    .item {
+        width: 45%;
+        margin: 20px 0;
+    }
+    .flex-cont {
+        flex-wrap: wrap;
+    }
+
+    .img-item {
+        width: 50%;
+    }
+
+    h1 {
+        margin-top: 50px;
+        font-size: 3.0rem;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 2.0rem;
+        font-weight: 500;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header ul {
+        display: none;
+    }
+
+    .container-50 {
+        width: 70%;
+    }
+
+    .container-80 {
+        width: 90%;
+    }
+
+    .item {
+        width: 80%;
+    }
+
+    .flex-cont {
+        justify-content: center;
+    }
+
+    .img-item {
+        width: 100%;
+    }
+
+    h1 {
+        margin-top: 50px;
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+}
